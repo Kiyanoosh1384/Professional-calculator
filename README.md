@@ -8,7 +8,7 @@
 
 
                         PROJECT DESCRIPTION
-================================================================================
+
 
 This is a comprehensive and professional mathematical calculator developed in 
 Python. It covers all major branches of mathematics including:
@@ -27,7 +27,7 @@ and anyone who needs a reliable and complete mathematical tool.
 
 
                         SYSTEM REQUIREMENTS
-================================================================================
+
 
 • Python 3.6 or higher installed on your system
 • No external libraries required (all built-in modules used)
@@ -35,7 +35,7 @@ and anyone who needs a reliable and complete mathematical tool.
 
 
                         INSTALLATION GUIDE
-================================================================================
+
 
 STEP 1: Install Python
 ------------------------
@@ -76,7 +76,7 @@ You should see: Python 3.6 or higher
 
 
                         HOW TO RUN THE CALCULATOR
-================================================================================
+
 
 METHOD 1: Using Terminal/Command Prompt (Recommended)
 ------------------------------------------------------
@@ -111,7 +111,7 @@ METHOD 3: Using IDLE (Python's Built-in IDE)
 
 
                         QUICK START GUIDE
-================================================================================
+
 
 1. Run the calculator (see instructions above)
 2. Main Menu will appear with 8 options:
@@ -134,7 +134,7 @@ METHOD 3: Using IDLE (Python's Built-in IDE)
 
 
                         BASIC CALCULATOR EXAMPLES
-================================================================================
+
 
 After selecting option 1 (Basic Calculator), try these:
 
@@ -179,7 +179,7 @@ calc> q
 
 
                         KEYBOARD SHORTCUTS
-================================================================================
+
 
 q        : Quit current menu / Exit program
 help     : Display complete reference guide
@@ -189,7 +189,7 @@ space    : Separate numbers (e.g., 1 2 3 4)
 
 
                         IMPORTANT NOTES
-================================================================================
+
 
 1. All trigonometric functions work in DEGREES by default
    Example: sin(30) = 0.5 (not radians)
@@ -215,7 +215,7 @@ space    : Separate numbers (e.g., 1 2 3 4)
 
 
                         TROUBLESHOOTING
-================================================================================
+
 
 PROBLEM: "python is not recognized"
 SOLUTION: Python is not installed or not in PATH
@@ -244,7 +244,7 @@ SOLUTION:
 
 
                         FOLDER STRUCTURE
-================================================================================
+
 
 
 mathematical-calculator/
@@ -254,7 +254,7 @@ mathematical-calculator/
 
 
                         SUPPORT & CONTACT
-================================================================================
+
 
 Developer: Kiyanoosh Shafiei
 
@@ -264,13 +264,13 @@ For support, questions, or feedback:
 
 
                         LICENSE
-================================================================================
+
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
                         SPECIAL NOTES FOR BEGINNERS
-================================================================================
+
 
 "I've never used Python before!"
 1. Install Python from https://python.org
@@ -293,4 +293,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 
 Made with ❤️ by Kiyanoosh Shafiei
-================================================================================
+
