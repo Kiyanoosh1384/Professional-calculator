@@ -18,7 +18,7 @@ def pretty_title():
     print("=" * 80)
     print("               ULTIMATE MATHEMATICAL CALCULATOR")
     print("=" * 80)
-    print("    Complete Mathematics: Algebra, Geometry, Calculus, Statistics")
+    print("    Complete Mathematics: Algebra, Geometry, Statistics, Probability")
     print("    Type 'q' to quit, 'help' for guide\n")
 
 # ======================================
@@ -60,21 +60,14 @@ def show_guide():
     print("\n🧮 LINEAR ALGEBRA (Section 5):")
     print("  det, inv, transpose, multiply, add, subtract, scalar")
     
-    print("\n📈 CALCULUS (Section 6):")
-    print("  Polynomial derivative, integral")
-    print("  Newton's method, bisection method")
-    
-    print("\n📐 GEOMETRY (Section 7):")
+    print("\n📐 GEOMETRY (Section 6):")
     print("  2D: square, rectangle, circle, triangle, etc.")
     print("  3D: cube, sphere, cylinder, cone, etc.")
     
-    print("\n🔢 NUMBER SYSTEMS (Section 8):")
+    print("\n🔢 NUMBER SYSTEMS (Section 7):")
     print("  bin_to_dec, dec_to_bin, hex_to_dec, dec_to_hex")
     
-    print("\n📊 SETS & LOGIC (Section 9):")
-    print("  union, intersection, difference, symmetric difference")
-    
-    print("\n🎲 PROBABILITY (Section 10):")
+    print("\n🎲 PROBABILITY (Section 8):")
     print("  binomial_prob, poisson_prob, permutations, combinations")
     
     print("\n" + "=" * 80 + "\n")
@@ -267,46 +260,6 @@ def matrix_subtract(A, B):
 
 def scalar_multiply(s, M):
     return [[s * M[i][j] for j in range(len(M[0]))] for i in range(len(M))]
-
-# ======================================
-#         CALCULUS FUNCTIONS
-# ======================================
-def derivative_poly(poly):
-    if len(poly) <= 1:
-        return [0]
-    return [poly[i] * (len(poly) - 1 - i) for i in range(len(poly) - 1)]
-
-def integral_poly(poly):
-    result = [0]
-    for i, coeff in enumerate(poly):
-        result.append(coeff / (len(poly) - i))
-    return result
-
-def newton_method(f, x0, tolerance=1e-7, max_iter=100):
-    x = x0
-    h = 1e-7
-    for _ in range(max_iter):
-        fx = f(x)
-        if abs(fx) < tolerance:
-            return x
-        dfx = (f(x + h) - f(x - h)) / (2 * h)
-        if abs(dfx) < tolerance:
-            return "Derivative zero"
-        x = x - fx / dfx
-    return x
-
-def bisection_method(f, a, b, tolerance=1e-7, max_iter=100):
-    if f(a) * f(b) > 0:
-        return "No root in interval or multiple roots"
-    for _ in range(max_iter):
-        c = (a + b) / 2
-        if abs(f(c)) < tolerance:
-            return c
-        if f(a) * f(c) < 0:
-            b = c
-        else:
-            a = c
-    return (a + b) / 2
 
 # ======================================
 #         GEOMETRY SHAPE CALCULATOR
@@ -529,29 +482,6 @@ def next_prime(n):
     return n
 
 # ======================================
-#         SET OPERATIONS
-# ======================================
-def union_sets(sets):
-    result = set()
-    for s in sets:
-        result = result | set(s)
-    return sorted(list(result))
-
-def intersection_sets(sets):
-    if not sets:
-        return []
-    result = set(sets[0])
-    for s in sets[1:]:
-        result = result & set(s)
-    return sorted(list(result))
-
-def difference_sets(A, B):
-    return sorted(list(set(A) - set(B)))
-
-def symmetric_difference_sets(A, B):
-    return sorted(list(set(A) ^ set(B)))
-
-# ======================================
 #         PROBABILITY FUNCTIONS
 # ======================================
 def binomial_prob(n, k, p):
@@ -561,7 +491,7 @@ def poisson_prob(k, lam):
     return (lam**k * math.exp(-lam)) / math.factorial(k)
 
 # ======================================
-#         SAFE EVALUATION ENGINE - FIXED
+#         SAFE EVALUATION ENGINE
 # ======================================
 def safe_eval(expr):
     if not expr.strip():
@@ -665,34 +595,12 @@ def safe_eval(expr):
     # Handle nth root: root(n,x) -> x**(1/n)
     expr = re.sub(r"root\(([^,]*),([^)]*)\)", r"(\2**(1/\1))", expr)
     
-    # CRITICAL FIX: Handle log with base FIRST (log(x, base))
-    # Use a different pattern to avoid conflicts
-    # First, find and replace log(x, base) with a special marker
-    def replace_log_base(match):
-        x = match.group(1)
-        base = match.group(2)
-        return f"log({x},{base})"
-    
-    # Handle log with base - use a simpler approach
-    # Convert log(1024, 2) to log(1024, 2) and keep it as is
-    # We'll handle it by not replacing it at all
-    
-    # FIRST: Handle ln(x) -> log(x) (natural log)
+    # Handle log with base - use a marker
     expr = re.sub(r"ln\(([^)]*)\)", r"log(\1)", expr)
-    
-    # SECOND: Handle log with base - use a marker
     expr = re.sub(r"log\(([^,]+),([^)]+)\)", r"__LOGBASE__(\1,\2)", expr)
-    
-    # THIRD: Handle log10(x) -> log10(x)
     expr = re.sub(r"log10\(([^)]*)\)", r"log10(\1)", expr)
-    
-    # FOURTH: Handle log2(x) -> log2(x)
     expr = re.sub(r"log2\(([^)]*)\)", r"log2(\1)", expr)
-    
-    # FIFTH: Handle log(x) -> log10(x) (only if it's a single argument)
     expr = re.sub(r"log\(([^)]*)\)", r"log10(\1)", expr)
-    
-    # SIXTH: Convert back the markers
     expr = re.sub(r"__LOGBASE__\(([^,]+),([^)]+)\)", r"log(\1,\2)", expr)
     
     # Handle exponential: exp(x) -> exp(x)
@@ -722,9 +630,6 @@ def safe_eval(expr):
     expr = re.sub(r"asin\(([^)]*)\)", r"degrees(asin(\1))", expr)
     expr = re.sub(r"acos\(([^)]*)\)", r"degrees(acos(\1))", expr)
     expr = re.sub(r"atan\(([^)]*)\)", r"degrees(atan(\1))", expr)
-    
-    # Debug: print the expression
-    # print(f"DEBUG: expr = {expr}")
     
     try:
         # Evaluate in a safe environment
@@ -905,45 +810,6 @@ def linear_algebra_menu():
         else:
             print("Invalid choice. Please try again.")
 
-def calculus_menu():
-    while True:
-        print("\nCALCULUS")
-        print("1) Polynomial Derivative")
-        print("2) Polynomial Integral")
-        print("3) Newton's Method")
-        print("4) Bisection Method")
-        print("q) Back to main menu")
-        
-        sub = input("Choose: ").strip()
-        
-        if sub == 'q':
-            return
-        
-        if sub == "1":
-            poly_str = input("Enter coefficients [a_n,...,a_0]: ")
-            poly = [float(x.strip()) for x in poly_str.strip('[]').split(',')]
-            print(f"Derivative: {derivative_poly(poly)}")
-        elif sub == "2":
-            poly_str = input("Enter coefficients [a_n,...,a_0]: ")
-            poly = [float(x.strip()) for x in poly_str.strip('[]').split(',')]
-            print(f"Integral: {integral_poly(poly)}")
-        elif sub == "3":
-            print("Define f(x) as expression using x")
-            expr = input("f(x) = ")
-            x0 = float(input("Initial guess: "))
-            def f(x):
-                return eval(expr)
-            print(f"Root: {newton_method(f, x0)}")
-        elif sub == "4":
-            print("Define f(x) as expression using x")
-            expr = input("f(x) = ")
-            a, b = map(float, input("Interval [a,b]: ").split())
-            def f(x):
-                return eval(expr)
-            print(f"Root: {bisection_method(f, a, b)}")
-        else:
-            print("Invalid choice. Please try again.")
-
 def number_systems_menu():
     while True:
         print("\nNUMBER SYSTEMS")
@@ -980,53 +846,6 @@ def number_systems_menu():
             print(f"Octal: {dec_to_oct(n)}")
         else:
             print("Invalid choice. Please try again.")
-
-def sets_menu():
-    while True:
-        print("\nSETS & LOGIC")
-        print("First, enter the number of sets:")
-        num_sets = input("Number of sets (or 'q' to go back): ").strip()
-        
-        if num_sets == 'q':
-            return
-        
-        try:
-            num_sets = int(num_sets)
-        except:
-            print("Invalid input. Please enter a number.")
-            continue
-        
-        sets = []
-        for i in range(num_sets):
-            s = list(map(int, input(f"Set {i+1} (numbers separated by space): ").split()))
-            sets.append(s)
-        
-        while True:
-            print("\nOperations:")
-            print("1) Union of all sets")
-            print("2) Intersection of all sets")
-            print("3) Difference of first two sets")
-            print("4) Symmetric difference of first two sets")
-            print("5) Enter new sets")
-            print("q) Back to main menu")
-            
-            sub = input("Choose: ").strip()
-            
-            if sub == 'q':
-                return
-            if sub == '5':
-                break
-            if sub == "1":
-                print(f"Union: {union_sets(sets)}")
-            elif sub == "2":
-                print(f"Intersection: {intersection_sets(sets)}")
-            elif sub == "3" and len(sets) >= 2:
-                print(f"A-B: {difference_sets(sets[0], sets[1])}")
-                print(f"B-A: {difference_sets(sets[1], sets[0])}")
-            elif sub == "4" and len(sets) >= 2:
-                print(f"Symmetric difference: {symmetric_difference_sets(sets[0], sets[1])}")
-            else:
-                print("Need at least 2 sets for this operation")
 
 def probability_menu():
     while True:
@@ -1075,11 +894,9 @@ def main():
         print("3) Number Theory")
         print("4) Statistics")
         print("5) Linear Algebra")
-        print("6) Calculus")
-        print("7) Geometry")
-        print("8) Number Systems")
-        print("9) Sets & Logic")
-        print("10) Probability")
+        print("6) Geometry")
+        print("7) Number Systems")
+        print("8) Probability")
         print("q) Quit")
         print("help) Complete Guide")
         
@@ -1123,22 +940,16 @@ def main():
             linear_algebra_menu()
         
         elif choice == "6":
-            calculus_menu()
-        
-        elif choice == "7":
             shape_calculator()
         
-        elif choice == "8":
+        elif choice == "7":
             number_systems_menu()
         
-        elif choice == "9":
-            sets_menu()
-        
-        elif choice == "10":
+        elif choice == "8":
             probability_menu()
         
         else:
-            print("Invalid option. Choose 1-10, 'q', or 'help'.")
+            print("Invalid option. Choose 1-8, 'q', or 'help'.")
 
 if __name__ == "__main__":
     main()
