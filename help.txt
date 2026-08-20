@@ -1,11 +1,10 @@
-
-                           In the Name of God
+In the Name of God
 
 ================================================================================
 
 Dear User,
 
-I am Kianoush Shafiei, the developer of this project. This is an advanced 
+I am Kiyanoosh Shafiei, the developer of this project. This is an advanced 
 mathematical calculator that I have designed and developed to cover a wide 
 range of mathematical operations, from basic arithmetic to advanced 
 mathematical computations.
@@ -25,20 +24,13 @@ This advanced mathematical calculator is a powerful tool that supports a
 wide range of mathematical operations, including:
 
 1.  BASIC ARITHMETIC:
-    - Addition (+)
-    - Subtraction (-)
-    - Multiplication (*)
-    - Division (/)
-    - Floor Division (//)
-    - Modulo (%)
+    - Addition (+), Subtraction (-), Multiplication (*)
+    - Division (/), Floor Division (//), Modulo (%)
     - Power (** or ^)
 
 2.  ADVANCED MATHEMATICAL FUNCTIONS:
-    - Factorial (!)
-    - Percentage (%)
-    - Square Root (sqrt or sqr)
-    - Cube Root (cbrt)
-    - nth Root (root(n, x))
+    - Factorial (!), Percentage (%)
+    - Square Root (sqrt or sqr), Cube Root (cbrt), nth Root (root(n, x))
     - Logarithm (ln, log, log10, log2, log(x, base))
     - Exponential (exp)
     - Trigonometric Functions (sin, cos, tan, cot, sec, csc)
@@ -51,13 +43,11 @@ wide range of mathematical operations, including:
     - Cubic Equations (ax³ + bx² + cx + d = 0)
 
 4.  NUMBER THEORY:
-    - Prime Number Check
-    - Prime Factorization
+    - Prime Number Check & Prime Factorization
     - Divisors and Sum of Divisors
     - Euler's Totient Function (phi)
     - GCD and LCM
     - Fibonacci Sequence
-    - Factorial
     - Perfect, Abundant, and Deficient Numbers
     - Next Prime Number
 
@@ -65,30 +55,22 @@ wide range of mathematical operations, including:
     - Mean, Median, Mode
     - Variance and Standard Deviation
     - Quartiles and Interquartile Range (IQR)
-    - Min, Max, Range
-    - Count and Sum
+    - Min, Max, Range, Count, and Sum
 
 6.  LINEAR ALGEBRA:
     - 2x2 and 3x3 Determinants
     - 2x2 Matrix Inverse
     - Matrix Transpose
-    - Matrix Multiplication
-    - Matrix Addition and Subtraction
+    - Matrix Multiplication, Addition, and Subtraction
     - Scalar Multiplication
 
-7.  CALCULUS:
-    - Polynomial Derivatives
-    - Polynomial Integrals
-    - Newton's Method for Root Finding
-    - Bisection Method for Root Finding
-
-8.  GEOMETRY:
+7.  GEOMETRY:
     - 2D Shapes: Square, Rectangle, Parallelogram, Rhombus, Triangle,
       Equilateral, Isosceles, Right Triangle, Trapezoid, Pentagon,
       Hexagon, Octagon, Circle, Ellipse
     - 3D Shapes: Cube, Cuboid, Sphere, Cylinder, Pyramid, Cone
 
-9.  NUMBER SYSTEMS:
+8.  NUMBER SYSTEMS:
     - Binary to Decimal Conversion
     - Decimal to Binary Conversion
     - Hexadecimal to Decimal Conversion
@@ -96,13 +78,7 @@ wide range of mathematical operations, including:
     - Octal to Decimal Conversion
     - Decimal to Octal Conversion
 
-10. SETS & LOGIC:
-    - Union of Multiple Sets
-    - Intersection of Multiple Sets
-    - Difference (A-B and B-A)
-    - Symmetric Difference
-
-11. PROBABILITY:
+9.  PROBABILITY:
     - Binomial Probability
     - Poisson Probability
     - Permutations
@@ -116,7 +92,7 @@ wide range of mathematical operations, including:
 
 1.  Starting the Calculator:
     Run the Python script: python calculator.py
-    The main menu will appear with 10 options.
+    The main menu will appear with 8 options.
 
 2.  Basic Calculator (Option 1):
     - Enter mathematical expressions directly
@@ -151,28 +127,17 @@ wide range of mathematical operations, including:
     - Enter matrices in the format [[a,b],[c,d]]
     - Use 'q' to return to the main menu
 
-7.  Calculus (Option 6):
-    - Polynomial derivatives and integrals
-    - Newton's and Bisection methods
-    - Use 'q' to return to the main menu
-
-8.  Geometry (Option 7):
+7.  Geometry (Option 6):
     - Select 2D or 3D shapes from the menu
     - Enter required dimensions
     - View calculated results
     - Use 'q' to return to the main menu
 
-9.  Number Systems (Option 8):
+8.  Number Systems (Option 7):
     - Convert between different number systems
     - Use 'q' to return to the main menu
 
-10. Sets & Logic (Option 9):
-    - Enter the number of sets
-    - Enter each set's elements
-    - Perform set operations
-    - Use 'q' to return to the main menu
-
-11. Probability (Option 10):
+9.  Probability (Option 8):
     - Calculate binomial and poisson probabilities
     - Calculate permutations and combinations
     - Use 'q' to return to the main menu
@@ -185,7 +150,7 @@ wide range of mathematical operations, including:
 
     q  : Quit current menu or exit the program
     help : Display the complete reference guide
-    1-10 : Select menu options
+    1-8 : Select menu options
 
 ================================================================================
 
@@ -254,7 +219,7 @@ Geometry:
 
 ================================================================================
 
-    Developer: Kianoush Shafiei
+    Developer: Kiyanoosh Shafiei
     Project: Ultimate Mathematical Calculator
 
 ================================================================================
@@ -291,25 +256,18 @@ Geometry:
 عملیات ریاضی پشتیبانی می‌کند، از جمله:
 
 1.  عملیات پایه:
-    - جمع (+)
-    - تفریق (-)
-    - ضرب (*)
-    - تقسیم (/)
-    - تقسیم صحیح (//)
-    - باقیمانده (%)
+    - جمع (+)، تفریق (-)، ضرب (*)
+    - تقسیم (/) ، تقسیم صحیح (//)، باقیمانده (%)
     - توان (** یا ^)
 
 2.  توابع ریاضی پیشرفته:
-    - فاکتوریل (!)
-    - درصد (%)
-    - جذر (sqrt یا sqr)
-    - ریشه سوم (cbrt)
-    - ریشه nام (root(n, x))
-    - لگاریتم (ln, log, log10, log2, log(x, base))
+    - فاکتوریل (!)، درصد (%)
+    - جذر (sqrt یا sqr)، ریشه سوم (cbrt)، ریشه nام (root(n, x))
+    - لگاریتم (ln، log، log10، log2، log(x, base))
     - نمایی (exp)
-    - توابع مثلثاتی (sin, cos, tan, cot, sec, csc)
-    - توابع مثلثاتی معکوس (asin, acos, atan)
-    - توابع هیپربولیک (sinh, cosh, tanh, coth, sech, csch)
+    - توابع مثلثاتی (sin، cos، tan، cot، sec، csc)
+    - توابع مثلثاتی معکوس (asin، acos، atan)
+    - توابع هیپربولیک (sinh، cosh، tanh، coth، sech، csch)
 
 3.  جبر و معادلات:
     - معادلات خطی (ax + b = 0)
@@ -317,13 +275,11 @@ Geometry:
     - معادلات درجه سوم (ax³ + bx² + cx + d = 0)
 
 4.  نظریه اعداد:
-    - بررسی عدد اول
-    - تجزیه به عوامل اول
+    - بررسی عدد اول و تجزیه به عوامل اول
     - مقسوم‌علیه‌ها و جمع مقسوم‌علیه‌ها
     - تابع فی اویلر (phi)
     - بزرگترین مقسوم‌علیه مشترک و کوچکترین مضرب مشترک
     - دنباله فیبوناچی
-    - فاکتوریل
     - اعداد کامل، فراوان و کمبود
     - عدد اول بعدی
 
@@ -331,30 +287,22 @@ Geometry:
     - میانگین، میانه، نما
     - واریانس و انحراف معیار
     - چارک‌ها و دامنه بین چارکی (IQR)
-    - کمترین، بیشترین، دامنه
-    - تعداد و جمع
+    - کمترین، بیشترین، دامنه، تعداد و جمع
 
 6.  جبر خطی:
     - دترمینان 2x2 و 3x3
     - معکوس ماتریس 2x2
     - ترانهاده ماتریس
-    - ضرب ماتریس
-    - جمع و تفریق ماتریس
+    - ضرب، جمع و تفریق ماتریس
     - ضرب اسکالر
 
-7.  حسابان:
-    - مشتق چندجمله‌ای
-    - انتگرال چندجمله‌ای
-    - روش نیوتن برای یافتن ریشه
-    - روش دوبخشی برای یافتن ریشه
-
-8.  هندسه:
+7.  هندسه:
     - اشکال ۲ بعدی: مربع، مستطیل، متوازی‌الاضلاع، لوزی، مثلث،
       متساوی‌الاضلاع، متساوی‌الساقین، مثلث قائم‌الزاویه، ذوزنقه،
       پنج‌ضلعی، شش‌ضلعی، هشت‌ضلعی، دایره، بیضی
     - اشکال ۳ بعدی: مکعب، مکعب‌مستطیل، کره، استوانه، هرم، مخروط
 
-9.  سیستم‌های عددی:
+8.  سیستم‌های عددی:
     - تبدیل باینری به دسیمال
     - تبدیل دسیمال به باینری
     - تبدیل هگزادسیمال به دسیمال
@@ -362,13 +310,7 @@ Geometry:
     - تبدیل اکتال به دسیمال
     - تبدیل دسیمال به اکتال
 
-10. مجموعه‌ها و منطق:
-    - اجتماع چند مجموعه
-    - اشتراک چند مجموعه
-    - تفاضل (A-B و B-A)
-    - تفاضل متقارن
-
-11. احتمال:
+9.  احتمال:
     - احتمال دوجمله‌ای
     - احتمال پواسون
     - جایگشت
@@ -382,7 +324,7 @@ Geometry:
 
 1.  شروع ماشین حساب:
     اسکریپت پایتون را اجرا کنید: python calculator.py
-    منوی اصلی با ۱۰ گزینه نمایش داده می‌شود.
+    منوی اصلی با ۸ گزینه نمایش داده می‌شود.
 
 2.  ماشین حساب پایه (گزینه ۱):
     - عبارات ریاضی را مستقیماً وارد کنید
@@ -416,28 +358,17 @@ Geometry:
     - ماتریس‌ها را به فرمت [[a,b],[c,d]] وارد کنید
     - برای بازگشت به منوی اصلی از 'q' استفاده کنید
 
-7.  حسابان (گزینه ۶):
-    - مشتق و انتگرال چندجمله‌ای
-    - روش‌های نیوتن و دوبخشی
-    - برای بازگشت به منوی اصلی از 'q' استفاده کنید
-
-8.  هندسه (گزینه ۷):
+7.  هندسه (گزینه ۶):
     - اشکال ۲ بعدی یا ۳ بعدی را از منو انتخاب کنید
     - ابعاد مورد نیاز را وارد کنید
     - نتایج محاسبه شده را مشاهده کنید
     - برای بازگشت به منوی اصلی از 'q' استفاده کنید
 
-9.  سیستم‌های عددی (گزینه ۸):
+8.  سیستم‌های عددی (گزینه ۷):
     - تبدیل بین سیستم‌های عددی مختلف
     - برای بازگشت به منوی اصلی از 'q' استفاده کنید
 
-10. مجموعه‌ها و منطق (گزینه ۹):
-    - تعداد مجموعه‌ها را وارد کنید
-    - عناصر هر مجموعه را وارد کنید
-    - عملیات مجموعه‌ها را انجام دهید
-    - برای بازگشت به منوی اصلی از 'q' استفاده کنید
-
-11. احتمال (گزینه ۱۰):
+9.  احتمال (گزینه ۸):
     - محاسبه احتمالات دوجمله‌ای و پواسون
     - محاسبه جایگشت و ترکیب
     - برای بازگشت به منوی اصلی از 'q' استفاده کنید
@@ -450,7 +381,7 @@ Geometry:
 
     q  : خروج از منوی فعلی یا خروج از برنامه
     help : نمایش راهنمای کامل
-    1-10 : انتخاب گزینه‌های منو
+    1-8 : انتخاب گزینه‌های منو
 
 ================================================================================
 
