@@ -1,13 +1,12 @@
-================================================================================
                     ULTIMATE MATHEMATICAL CALCULATOR
                     Professional Python Calculator
-================================================================================
+
 
                         Developed by: Kiyanoosh Shafiei
                         Version: 3.0
                         License: MIT
 
-================================================================================
+
                         PROJECT DESCRIPTION
 ================================================================================
 
@@ -26,7 +25,7 @@ Python. It covers all major branches of mathematics including:
 This calculator is designed for students, teachers, engineers, researchers, 
 and anyone who needs a reliable and complete mathematical tool.
 
-================================================================================
+
                         SYSTEM REQUIREMENTS
 ================================================================================
 
@@ -34,7 +33,7 @@ and anyone who needs a reliable and complete mathematical tool.
 • No external libraries required (all built-in modules used)
 • Operating System: Windows, Linux, or macOS
 
-================================================================================
+
                         INSTALLATION GUIDE
 ================================================================================
 
@@ -75,7 +74,7 @@ python3 --version
 
 You should see: Python 3.6 or higher
 
-================================================================================
+
                         HOW TO RUN THE CALCULATOR
 ================================================================================
 
@@ -110,7 +109,7 @@ METHOD 3: Using IDLE (Python's Built-in IDE)
 3. Select calculator.py
 4. Press F5 to run
 
-================================================================================
+
                         QUICK START GUIDE
 ================================================================================
 
@@ -133,7 +132,7 @@ METHOD 3: Using IDLE (Python's Built-in IDE)
 
 6. Type 'help' anytime for complete guide
 
-================================================================================
+
                         BASIC CALCULATOR EXAMPLES
 ================================================================================
 
@@ -178,7 +177,7 @@ Result: 1.1752011936438014
 calc> q
 (Returns to main menu)
 
-================================================================================
+
                         KEYBOARD SHORTCUTS
 ================================================================================
 
@@ -188,7 +187,7 @@ help     : Display complete reference guide
 space    : Separate numbers (e.g., 1 2 3 4)
 ^        : Power operation (e.g., 2^3 = 8)
 
-================================================================================
+
                         IMPORTANT NOTES
 ================================================================================
 
@@ -214,7 +213,7 @@ space    : Separate numbers (e.g., 1 2 3 4)
 8. For percentage: number%
    Example: 50% = 0.5
 
-================================================================================
+
                         TROUBLESHOOTING
 ================================================================================
 
@@ -243,16 +242,17 @@ SOLUTION:
 → Use correct format: [[a,b],[c,d]]
 → Make sure dimensions match for multiplication
 
-================================================================================
+
                         FOLDER STRUCTURE
 ================================================================================
+
 
 mathematical-calculator/
 ├── calculator.py          # Main program file
 ├── README.md              # This documentation
 └── LICENSE                # MIT License
 
-================================================================================
+
                         SUPPORT & CONTACT
 ================================================================================
 
@@ -262,13 +262,13 @@ For support, questions, or feedback:
 • Open an issue on GitHub
 • Star the repository if you find it useful!
 
-================================================================================
+
                         LICENSE
 ================================================================================
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-================================================================================
+
                         SPECIAL NOTES FOR BEGINNERS
 ================================================================================
 
@@ -291,6 +291,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 • Make sure all parentheses are closed
 • For matrices, use the correct format
 
-================================================================================
-Made with ❤️ by Kianoush Shafiei
+
+Made with ❤️ by Kiyanoosh Shafiei
 ================================================================================
